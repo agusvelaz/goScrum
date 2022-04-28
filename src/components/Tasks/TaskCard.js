@@ -5,13 +5,18 @@ const card = {
   borderRadius: "5px",
   border: ".5px solid #ffffff1c",
   position: "relative",
-  padding: 2,
-  m: 1,
+  px: 2,
+  py:0,
+  my: 1,
   wordBreak: "break-all",
+  backgroundColor: "primary.main",
+  h3:{
+      my:2,
+  }
 };
 const close = {
   right: 12,
-  top: 10,
+  top: 19,
   position: "absolute",
 };
 
@@ -28,13 +33,13 @@ export default function TaskCard({
   };
   return (
     <Box sx={card}>
-      <Box sx={close}>X</Box>
       <Box>
+        <Box sx={close}>X</Box>
         <h3>{title}</h3>
         <h6>{dateTime}</h6>
         <h5>{creator}</h5>
       </Box>
-      <Box sx={{ "& button": { mr: 1 } }}>
+      <Box sx={{ "& button": { mr: 1, mb: 1 } }}>
         <Button
           type="button"
           color="secondary"

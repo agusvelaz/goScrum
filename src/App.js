@@ -1,11 +1,11 @@
 import "./App.css";
 import {ThemeProvider} from '@mui/material'
 import theme from './assets/theme'
-import { lazy, Suspense } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Routes, Route,  useNavigate  } from "react-router-dom";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import { lazy, Suspense, useEffect} from "react";
+import { AnimatePresence} from "framer-motion";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 import Home from "./components/Home";
 import MotionDiv from "./components/MotionDiv";
 
@@ -14,16 +14,15 @@ import MotionDiv from "./components/MotionDiv";
 const NotFound = lazy(() => import("./components/NotFound"));
 
 const Auth = ({ children }) => {
-  const navigateTo = useNavigate();
   const isLogged = localStorage.getItem("logged"); //falta auth en Login
   if (!isLogged) {
-    return navigateTo("/login", {replace: true})
+    return <Navigate to="/login" replace={true} />;
   }
   return children;
 };
 
 export default function App() {
-  // console.log(isLogged)
+  // console.log(isLogged) 
   return (
     <ThemeProvider theme={theme}>
     <div className="App">

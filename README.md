@@ -5,4 +5,5 @@ React Router
 Material UI
 Framer Motion
 Formik
+Yup
 

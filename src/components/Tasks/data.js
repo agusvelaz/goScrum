@@ -6,7 +6,7 @@ const data = [
     creator: "Agusvelaz",
     type: "new",
     priority: "high",
-    description: "asdasd",
+    description: "asdasdgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
   },
   {
     id: 2,
